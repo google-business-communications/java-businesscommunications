@@ -2,15 +2,30 @@
 
 [Business Communications](https://developers.google.com/business-communications/business-messages/reference/business-communications/rest) is an API for creating, managing, and launching agents for Google's Verified SMS and Business Messages platforms.
 
-## Versioning
+## Setup Instructions
+The Business Communications library is hosted on Maven central.
+To use the library in your project, add the following to the dependencies section of your
+project’s build.gradle.
 
-This library follows [Semantic Versioning](http://semver.org/).
+```
+repositories {
+   mavenCentral()
+}
 
-This library is considered to be **General Availability (GA)**. This means it
-is stable; the code surface will not change in backwards-incompatible ways
-unless absolutely necessary (e.g. because of critical security issues) or with
-an extensive deprecation period. Issues and requests against **GA** libraries
-are addressed with the highest priority.
+dependencies {
+   compile group: 'com.google.apis', name: 'google-api-services-businesscommunications', version: '1.25.0'
+}
+```
+
+If using maven, add the following to your pom.xml file.
+
+```xml
+<dependency>
+	<groupId>com.google.apis</groupId>
+	<artifactId>google-api-services-businesscommunications</artifactId>
+	<version>1.25.0</version>
+</dependency>
+```
 
 ## Contributing
 
