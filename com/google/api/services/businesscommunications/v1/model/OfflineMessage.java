@@ -19,7 +19,7 @@
 package com.google.api.services.businesscommunications.v1.model;
 
 /**
- * Request to launch a location.
+ * The greeting shown to users when they enter a conversation with the agent outside the chat hours.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Business Communications. For a detailed explanation
@@ -30,16 +30,40 @@ package com.google.api.services.businesscommunications.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class RequestLocationLaunchRequest extends com.google.api.client.json.GenericJson {
+public final class OfflineMessage extends com.google.api.client.json.GenericJson {
 
-  @Override
-  public RequestLocationLaunchRequest set(String fieldName, Object value) {
-    return (RequestLocationLaunchRequest) super.set(fieldName, value);
+  /**
+   * The text of the offline message.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String text;
+
+  /**
+   * The text of the offline message.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getText() {
+    return text;
+  }
+
+  /**
+   * The text of the offline message.
+   * @param text text or {@code null} for none
+   */
+  public OfflineMessage setText(java.lang.String text) {
+    this.text = text;
+    return this;
   }
 
   @Override
-  public RequestLocationLaunchRequest clone() {
-    return (RequestLocationLaunchRequest) super.clone();
+  public OfflineMessage set(String fieldName, Object value) {
+    return (OfflineMessage) super.set(fieldName, value);
+  }
+
+  @Override
+  public OfflineMessage clone() {
+    return (OfflineMessage) super.clone();
   }
 
 }
