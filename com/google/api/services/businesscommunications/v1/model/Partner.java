@@ -19,7 +19,7 @@
 package com.google.api.services.businesscommunications.v1.model;
 
 /**
- * A conversational entity that represents a brand.
+ * Partner that is onboarded with a supported product.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Business Communications. For a detailed explanation
@@ -30,57 +30,79 @@ package com.google.api.services.businesscommunications.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Agent extends com.google.api.client.json.GenericJson {
+public final class Partner extends com.google.api.client.json.GenericJson {
 
   /**
-   * Detailed agent information for Business Messages.
+   * Optional. The company name of the partner.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private BusinessMessagesAgent businessMessagesAgent;
+  private java.lang.String company;
 
   /**
-   * Required. The name that the agent displays to users. Maximum 40 characters. Not modifiable
-   * after agent verification.
+   * Optional. The list of contact emails.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> contactEmails;
+
+  /**
+   * Required. The display name of the partner.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * The unique identifier of the agent. Read-only. Defined by the platform.
+   * Output only. The unique identifier of the partner. Defined by the platform.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Detailed agent information for Verified SMS.
+   * The product capabilities of the partner.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private VerifiedSmsAgent verifiedSmsAgent;
+  private java.util.List<ProductCapability> productCapabilities;
 
   /**
-   * Detailed agent information for Business Messages.
+   * Optional. The company name of the partner.
    * @return value or {@code null} for none
    */
-  public BusinessMessagesAgent getBusinessMessagesAgent() {
-    return businessMessagesAgent;
+  public java.lang.String getCompany() {
+    return company;
   }
 
   /**
-   * Detailed agent information for Business Messages.
-   * @param businessMessagesAgent businessMessagesAgent or {@code null} for none
+   * Optional. The company name of the partner.
+   * @param company company or {@code null} for none
    */
-  public Agent setBusinessMessagesAgent(BusinessMessagesAgent businessMessagesAgent) {
-    this.businessMessagesAgent = businessMessagesAgent;
+  public Partner setCompany(java.lang.String company) {
+    this.company = company;
     return this;
   }
 
   /**
-   * Required. The name that the agent displays to users. Maximum 40 characters. Not modifiable
-   * after agent verification.
+   * Optional. The list of contact emails.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getContactEmails() {
+    return contactEmails;
+  }
+
+  /**
+   * Optional. The list of contact emails.
+   * @param contactEmails contactEmails or {@code null} for none
+   */
+  public Partner setContactEmails(java.util.List<java.lang.String> contactEmails) {
+    this.contactEmails = contactEmails;
+    return this;
+  }
+
+  /**
+   * Required. The display name of the partner.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -88,17 +110,16 @@ public final class Agent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The name that the agent displays to users. Maximum 40 characters. Not modifiable
-   * after agent verification.
+   * Required. The display name of the partner.
    * @param displayName displayName or {@code null} for none
    */
-  public Agent setDisplayName(java.lang.String displayName) {
+  public Partner setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
     return this;
   }
 
   /**
-   * The unique identifier of the agent. Read-only. Defined by the platform.
+   * Output only. The unique identifier of the partner. Defined by the platform.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -106,39 +127,39 @@ public final class Agent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique identifier of the agent. Read-only. Defined by the platform.
+   * Output only. The unique identifier of the partner. Defined by the platform.
    * @param name name or {@code null} for none
    */
-  public Agent setName(java.lang.String name) {
+  public Partner setName(java.lang.String name) {
     this.name = name;
     return this;
   }
 
   /**
-   * Detailed agent information for Verified SMS.
+   * The product capabilities of the partner.
    * @return value or {@code null} for none
    */
-  public VerifiedSmsAgent getVerifiedSmsAgent() {
-    return verifiedSmsAgent;
+  public java.util.List<ProductCapability> getProductCapabilities() {
+    return productCapabilities;
   }
 
   /**
-   * Detailed agent information for Verified SMS.
-   * @param verifiedSmsAgent verifiedSmsAgent or {@code null} for none
+   * The product capabilities of the partner.
+   * @param productCapabilities productCapabilities or {@code null} for none
    */
-  public Agent setVerifiedSmsAgent(VerifiedSmsAgent verifiedSmsAgent) {
-    this.verifiedSmsAgent = verifiedSmsAgent;
+  public Partner setProductCapabilities(java.util.List<ProductCapability> productCapabilities) {
+    this.productCapabilities = productCapabilities;
     return this;
   }
 
   @Override
-  public Agent set(String fieldName, Object value) {
-    return (Agent) super.set(fieldName, value);
+  public Partner set(String fieldName, Object value) {
+    return (Partner) super.set(fieldName, value);
   }
 
   @Override
-  public Agent clone() {
-    return (Agent) super.clone();
+  public Partner clone() {
+    return (Partner) super.clone();
   }
 
 }

@@ -19,8 +19,7 @@
 package com.google.api.services.businesscommunications.v1.model;
 
 /**
- * Suggested replies shown to users when they enter a conversation with the agent for the first
- * time.
+ * The product capabilities that the partner supports.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Business Communications. For a detailed explanation
@@ -31,40 +30,64 @@ package com.google.api.services.businesscommunications.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ConversationStarters extends com.google.api.client.json.GenericJson {
+public final class ProductCapability extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Suggestion at the beginning of a conversation.
+   * Business Messages capability.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Suggestion suggestion;
+  private BusinessMessagesCapability businessMessagesCapability;
 
   /**
-   * Optional. Suggestion at the beginning of a conversation.
+   * The product supported by the partner.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String product;
+
+  /**
+   * Business Messages capability.
    * @return value or {@code null} for none
    */
-  public Suggestion getSuggestion() {
-    return suggestion;
+  public BusinessMessagesCapability getBusinessMessagesCapability() {
+    return businessMessagesCapability;
   }
 
   /**
-   * Optional. Suggestion at the beginning of a conversation.
-   * @param suggestion suggestion or {@code null} for none
+   * Business Messages capability.
+   * @param businessMessagesCapability businessMessagesCapability or {@code null} for none
    */
-  public ConversationStarters setSuggestion(Suggestion suggestion) {
-    this.suggestion = suggestion;
+  public ProductCapability setBusinessMessagesCapability(BusinessMessagesCapability businessMessagesCapability) {
+    this.businessMessagesCapability = businessMessagesCapability;
+    return this;
+  }
+
+  /**
+   * The product supported by the partner.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProduct() {
+    return product;
+  }
+
+  /**
+   * The product supported by the partner.
+   * @param product product or {@code null} for none
+   */
+  public ProductCapability setProduct(java.lang.String product) {
+    this.product = product;
     return this;
   }
 
   @Override
-  public ConversationStarters set(String fieldName, Object value) {
-    return (ConversationStarters) super.set(fieldName, value);
+  public ProductCapability set(String fieldName, Object value) {
+    return (ProductCapability) super.set(fieldName, value);
   }
 
   @Override
-  public ConversationStarters clone() {
-    return (ConversationStarters) super.clone();
+  public ProductCapability clone() {
+    return (ProductCapability) super.clone();
   }
 
 }

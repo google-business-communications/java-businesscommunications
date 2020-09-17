@@ -19,8 +19,7 @@
 package com.google.api.services.businesscommunications.v1.model;
 
 /**
- * Suggested replies shown to users when they enter a conversation with the agent for the first
- * time.
+ * Business Messages capabilities
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Business Communications. For a detailed explanation
@@ -31,40 +30,40 @@ package com.google.api.services.businesscommunications.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ConversationStarters extends com.google.api.client.json.GenericJson {
+public final class BusinessMessagesCapability extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Suggestion at the beginning of a conversation.
+   * Required. The webhook URL where the messages are delivered.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Suggestion suggestion;
+  private java.lang.String webhookUrl;
 
   /**
-   * Optional. Suggestion at the beginning of a conversation.
+   * Required. The webhook URL where the messages are delivered.
    * @return value or {@code null} for none
    */
-  public Suggestion getSuggestion() {
-    return suggestion;
+  public java.lang.String getWebhookUrl() {
+    return webhookUrl;
   }
 
   /**
-   * Optional. Suggestion at the beginning of a conversation.
-   * @param suggestion suggestion or {@code null} for none
+   * Required. The webhook URL where the messages are delivered.
+   * @param webhookUrl webhookUrl or {@code null} for none
    */
-  public ConversationStarters setSuggestion(Suggestion suggestion) {
-    this.suggestion = suggestion;
+  public BusinessMessagesCapability setWebhookUrl(java.lang.String webhookUrl) {
+    this.webhookUrl = webhookUrl;
     return this;
   }
 
   @Override
-  public ConversationStarters set(String fieldName, Object value) {
-    return (ConversationStarters) super.set(fieldName, value);
+  public BusinessMessagesCapability set(String fieldName, Object value) {
+    return (BusinessMessagesCapability) super.set(fieldName, value);
   }
 
   @Override
-  public ConversationStarters clone() {
-    return (ConversationStarters) super.clone();
+  public BusinessMessagesCapability clone() {
+    return (BusinessMessagesCapability) super.clone();
   }
 
 }
