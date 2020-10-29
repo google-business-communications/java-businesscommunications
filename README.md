@@ -65,13 +65,12 @@ private static BusinessCommunications.Builder getBusinessCommunicationsBuilder(S
     JacksonFactory jsonFactory = JacksonFactory.getDefaultInstance();
 
     // Create instance of the Business Communications API
-    BusinessCommunications.Builder builder = new BusinessCommunications
+    builder = new BusinessCommunications
         .Builder(httpTransport, jsonFactory, null)
         .setApplicationName(credential.getServiceAccountProjectId());
 
     // Set the API credentials and endpoint
     builder.setHttpRequestInitializer(credential);
-    builder.setRootUrl(Constants.API_URL);
   } catch (Exception e) {
     e.printStackTrace();
   }
