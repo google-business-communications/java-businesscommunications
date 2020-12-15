@@ -81,7 +81,7 @@ private static BusinessCommunications.Builder getBusinessCommunicationsBuilder(S
 public static void main(String args[]) {
   try {
     // Create client library reference
-    BusinessCommunications.Builder builder = getBusinessCommunicationsBuilder('your-service-account-key-file-location');
+    BusinessCommunications.Builder builder = getBusinessCommunicationsBuilder("your-service-account-key-file-location");
 
   	// Create a request to create a new brand with the name "Test Brand"
     BusinessCommunications.Brands.Create request = builder
