@@ -87,7 +87,7 @@ public static void main(String args[]) {
     BusinessCommunications.Brands.Create request = builder
         .build().brands().create(new Brand().setDisplayName("Test Brand"));
 
-    brand = request.execute();
+    Brand brand = request.execute();
 
     // Print newly created brand object
     System.out.println(brand.toPrettyString());
