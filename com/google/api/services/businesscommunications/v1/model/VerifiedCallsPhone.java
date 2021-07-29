@@ -19,7 +19,7 @@
 package com.google.api.services.businesscommunications.v1.model;
 
 /**
- * Details about the verification information for a location.
+ * Phone number with approval information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Business Communications. For a detailed explanation
@@ -30,64 +30,64 @@ package com.google.api.services.businesscommunications.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class LocationVerification extends com.google.api.client.json.GenericJson {
+public final class VerifiedCallsPhone extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The identifier for verification.
+   * Output only. Approval details, each phone number must be approved before use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String name;
+  private ApprovalDetails approvalDetails;
 
   /**
-   * The verification state.
+   * Immutable. Phone number in E.164 format i.e. +18888888888
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String verificationState;
+  private java.lang.String number;
 
   /**
-   * Required. The identifier for verification.
+   * Output only. Approval details, each phone number must be approved before use.
    * @return value or {@code null} for none
    */
-  public java.lang.String getName() {
-    return name;
+  public ApprovalDetails getApprovalDetails() {
+    return approvalDetails;
   }
 
   /**
-   * Required. The identifier for verification.
-   * @param name name or {@code null} for none
+   * Output only. Approval details, each phone number must be approved before use.
+   * @param approvalDetails approvalDetails or {@code null} for none
    */
-  public LocationVerification setName(java.lang.String name) {
-    this.name = name;
+  public VerifiedCallsPhone setApprovalDetails(ApprovalDetails approvalDetails) {
+    this.approvalDetails = approvalDetails;
     return this;
   }
 
   /**
-   * The verification state.
+   * Immutable. Phone number in E.164 format i.e. +18888888888
    * @return value or {@code null} for none
    */
-  public java.lang.String getVerificationState() {
-    return verificationState;
+  public java.lang.String getNumber() {
+    return number;
   }
 
   /**
-   * The verification state.
-   * @param verificationState verificationState or {@code null} for none
+   * Immutable. Phone number in E.164 format i.e. +18888888888
+   * @param number number or {@code null} for none
    */
-  public LocationVerification setVerificationState(java.lang.String verificationState) {
-    this.verificationState = verificationState;
+  public VerifiedCallsPhone setNumber(java.lang.String number) {
+    this.number = number;
     return this;
   }
 
   @Override
-  public LocationVerification set(String fieldName, Object value) {
-    return (LocationVerification) super.set(fieldName, value);
+  public VerifiedCallsPhone set(String fieldName, Object value) {
+    return (VerifiedCallsPhone) super.set(fieldName, value);
   }
 
   @Override
-  public LocationVerification clone() {
-    return (LocationVerification) super.clone();
+  public VerifiedCallsPhone clone() {
+    return (VerifiedCallsPhone) super.clone();
   }
 
 }

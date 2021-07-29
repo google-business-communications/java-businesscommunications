@@ -19,7 +19,7 @@
 package com.google.api.services.businesscommunications.v1.model;
 
 /**
- * Details about the verification information for a location.
+ * Verified SMS capabilities
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Business Communications. For a detailed explanation
@@ -30,64 +30,40 @@ package com.google.api.services.businesscommunications.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class LocationVerification extends com.google.api.client.json.GenericJson {
+public final class VerifiedSmsCapability extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The identifier for verification.
+   * Required. The webhook URL where the Verified SMS callbacks are delivered.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String name;
+  private java.lang.String webhookUrl;
 
   /**
-   * The verification state.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String verificationState;
-
-  /**
-   * Required. The identifier for verification.
+   * Required. The webhook URL where the Verified SMS callbacks are delivered.
    * @return value or {@code null} for none
    */
-  public java.lang.String getName() {
-    return name;
+  public java.lang.String getWebhookUrl() {
+    return webhookUrl;
   }
 
   /**
-   * Required. The identifier for verification.
-   * @param name name or {@code null} for none
+   * Required. The webhook URL where the Verified SMS callbacks are delivered.
+   * @param webhookUrl webhookUrl or {@code null} for none
    */
-  public LocationVerification setName(java.lang.String name) {
-    this.name = name;
-    return this;
-  }
-
-  /**
-   * The verification state.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getVerificationState() {
-    return verificationState;
-  }
-
-  /**
-   * The verification state.
-   * @param verificationState verificationState or {@code null} for none
-   */
-  public LocationVerification setVerificationState(java.lang.String verificationState) {
-    this.verificationState = verificationState;
+  public VerifiedSmsCapability setWebhookUrl(java.lang.String webhookUrl) {
+    this.webhookUrl = webhookUrl;
     return this;
   }
 
   @Override
-  public LocationVerification set(String fieldName, Object value) {
-    return (LocationVerification) super.set(fieldName, value);
+  public VerifiedSmsCapability set(String fieldName, Object value) {
+    return (VerifiedSmsCapability) super.set(fieldName, value);
   }
 
   @Override
-  public LocationVerification clone() {
-    return (LocationVerification) super.clone();
+  public VerifiedSmsCapability clone() {
+    return (VerifiedSmsCapability) super.clone();
   }
 
 }

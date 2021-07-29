@@ -19,7 +19,7 @@
 package com.google.api.services.businesscommunications.v1.model;
 
 /**
- * Details about the verification information for a location.
+ * Contact details displayed in addition to the messaging button.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Business Communications. For a detailed explanation
@@ -30,64 +30,64 @@ package com.google.api.services.businesscommunications.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class LocationVerification extends com.google.api.client.json.GenericJson {
+public final class ContactOption extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The identifier for verification.
+   * Required. The list of contact options available for the specified URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String name;
+  private java.util.List<java.lang.String> options;
 
   /**
-   * The verification state.
+   * Required. The URL that contact options are available for.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String verificationState;
+  private java.lang.String url;
 
   /**
-   * Required. The identifier for verification.
+   * Required. The list of contact options available for the specified URL.
    * @return value or {@code null} for none
    */
-  public java.lang.String getName() {
-    return name;
+  public java.util.List<java.lang.String> getOptions() {
+    return options;
   }
 
   /**
-   * Required. The identifier for verification.
-   * @param name name or {@code null} for none
+   * Required. The list of contact options available for the specified URL.
+   * @param options options or {@code null} for none
    */
-  public LocationVerification setName(java.lang.String name) {
-    this.name = name;
+  public ContactOption setOptions(java.util.List<java.lang.String> options) {
+    this.options = options;
     return this;
   }
 
   /**
-   * The verification state.
+   * Required. The URL that contact options are available for.
    * @return value or {@code null} for none
    */
-  public java.lang.String getVerificationState() {
-    return verificationState;
+  public java.lang.String getUrl() {
+    return url;
   }
 
   /**
-   * The verification state.
-   * @param verificationState verificationState or {@code null} for none
+   * Required. The URL that contact options are available for.
+   * @param url url or {@code null} for none
    */
-  public LocationVerification setVerificationState(java.lang.String verificationState) {
-    this.verificationState = verificationState;
+  public ContactOption setUrl(java.lang.String url) {
+    this.url = url;
     return this;
   }
 
   @Override
-  public LocationVerification set(String fieldName, Object value) {
-    return (LocationVerification) super.set(fieldName, value);
+  public ContactOption set(String fieldName, Object value) {
+    return (ContactOption) super.set(fieldName, value);
   }
 
   @Override
-  public LocationVerification clone() {
-    return (LocationVerification) super.clone();
+  public ContactOption clone() {
+    return (ContactOption) super.clone();
   }
 
 }

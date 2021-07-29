@@ -19,7 +19,7 @@
 package com.google.api.services.businesscommunications.v1.model;
 
 /**
- * Details about the verification information for a location.
+ * Call reason with approval information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Business Communications. For a detailed explanation
@@ -30,64 +30,64 @@ package com.google.api.services.businesscommunications.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class LocationVerification extends com.google.api.client.json.GenericJson {
+public final class CallReason extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The identifier for verification.
+   * Output only. Approval details; each call reason must be approved before use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String name;
+  private ApprovalDetails approvalDetails;
 
   /**
-   * The verification state.
+   * Immutable. The actual text of the call reason.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String verificationState;
+  private java.lang.String text;
 
   /**
-   * Required. The identifier for verification.
+   * Output only. Approval details; each call reason must be approved before use.
    * @return value or {@code null} for none
    */
-  public java.lang.String getName() {
-    return name;
+  public ApprovalDetails getApprovalDetails() {
+    return approvalDetails;
   }
 
   /**
-   * Required. The identifier for verification.
-   * @param name name or {@code null} for none
+   * Output only. Approval details; each call reason must be approved before use.
+   * @param approvalDetails approvalDetails or {@code null} for none
    */
-  public LocationVerification setName(java.lang.String name) {
-    this.name = name;
+  public CallReason setApprovalDetails(ApprovalDetails approvalDetails) {
+    this.approvalDetails = approvalDetails;
     return this;
   }
 
   /**
-   * The verification state.
+   * Immutable. The actual text of the call reason.
    * @return value or {@code null} for none
    */
-  public java.lang.String getVerificationState() {
-    return verificationState;
+  public java.lang.String getText() {
+    return text;
   }
 
   /**
-   * The verification state.
-   * @param verificationState verificationState or {@code null} for none
+   * Immutable. The actual text of the call reason.
+   * @param text text or {@code null} for none
    */
-  public LocationVerification setVerificationState(java.lang.String verificationState) {
-    this.verificationState = verificationState;
+  public CallReason setText(java.lang.String text) {
+    this.text = text;
     return this;
   }
 
   @Override
-  public LocationVerification set(String fieldName, Object value) {
-    return (LocationVerification) super.set(fieldName, value);
+  public CallReason set(String fieldName, Object value) {
+    return (CallReason) super.set(fieldName, value);
   }
 
   @Override
-  public LocationVerification clone() {
-    return (LocationVerification) super.clone();
+  public CallReason clone() {
+    return (CallReason) super.clone();
   }
 
 }

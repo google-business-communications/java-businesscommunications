@@ -19,7 +19,7 @@
 package com.google.api.services.businesscommunications.v1.model;
 
 /**
- * Details about the verification information for a location.
+ * Approval details composed from the state and optional additional information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Business Communications. For a detailed explanation
@@ -30,64 +30,64 @@ package com.google.api.services.businesscommunications.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class LocationVerification extends com.google.api.client.json.GenericJson {
+public final class ApprovalDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The identifier for verification.
+   * Output only. Additional information about the decision, if available.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String name;
+  private java.lang.String approvalInfo;
 
   /**
-   * The verification state.
+   * Output only. The current approval state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String verificationState;
+  private java.lang.String approvalState;
 
   /**
-   * Required. The identifier for verification.
+   * Output only. Additional information about the decision, if available.
    * @return value or {@code null} for none
    */
-  public java.lang.String getName() {
-    return name;
+  public java.lang.String getApprovalInfo() {
+    return approvalInfo;
   }
 
   /**
-   * Required. The identifier for verification.
-   * @param name name or {@code null} for none
+   * Output only. Additional information about the decision, if available.
+   * @param approvalInfo approvalInfo or {@code null} for none
    */
-  public LocationVerification setName(java.lang.String name) {
-    this.name = name;
+  public ApprovalDetails setApprovalInfo(java.lang.String approvalInfo) {
+    this.approvalInfo = approvalInfo;
     return this;
   }
 
   /**
-   * The verification state.
+   * Output only. The current approval state.
    * @return value or {@code null} for none
    */
-  public java.lang.String getVerificationState() {
-    return verificationState;
+  public java.lang.String getApprovalState() {
+    return approvalState;
   }
 
   /**
-   * The verification state.
-   * @param verificationState verificationState or {@code null} for none
+   * Output only. The current approval state.
+   * @param approvalState approvalState or {@code null} for none
    */
-  public LocationVerification setVerificationState(java.lang.String verificationState) {
-    this.verificationState = verificationState;
+  public ApprovalDetails setApprovalState(java.lang.String approvalState) {
+    this.approvalState = approvalState;
     return this;
   }
 
   @Override
-  public LocationVerification set(String fieldName, Object value) {
-    return (LocationVerification) super.set(fieldName, value);
+  public ApprovalDetails set(String fieldName, Object value) {
+    return (ApprovalDetails) super.set(fieldName, value);
   }
 
   @Override
-  public LocationVerification clone() {
-    return (LocationVerification) super.clone();
+  public ApprovalDetails clone() {
+    return (ApprovalDetails) super.clone();
   }
 
 }

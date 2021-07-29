@@ -19,7 +19,7 @@
 package com.google.api.services.businesscommunications.v1.model;
 
 /**
- * Details about the verification information for a location.
+ * The content for a survey question response.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Business Communications. For a detailed explanation
@@ -30,64 +30,67 @@ package com.google.api.services.businesscommunications.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class LocationVerification extends com.google.api.client.json.GenericJson {
+public final class SurveyResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The identifier for verification.
+   * Required. Text that is shown in the survey and sent back to the agent when the user taps it.
+   * Maximum 35 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String name;
+  private java.lang.String content;
 
   /**
-   * The verification state.
+   * The string the agent receives when the user taps the question response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String verificationState;
+  private java.lang.String postbackData;
 
   /**
-   * Required. The identifier for verification.
+   * Required. Text that is shown in the survey and sent back to the agent when the user taps it.
+   * Maximum 35 characters.
    * @return value or {@code null} for none
    */
-  public java.lang.String getName() {
-    return name;
+  public java.lang.String getContent() {
+    return content;
   }
 
   /**
-   * Required. The identifier for verification.
-   * @param name name or {@code null} for none
+   * Required. Text that is shown in the survey and sent back to the agent when the user taps it.
+   * Maximum 35 characters.
+   * @param content content or {@code null} for none
    */
-  public LocationVerification setName(java.lang.String name) {
-    this.name = name;
+  public SurveyResponse setContent(java.lang.String content) {
+    this.content = content;
     return this;
   }
 
   /**
-   * The verification state.
+   * The string the agent receives when the user taps the question response.
    * @return value or {@code null} for none
    */
-  public java.lang.String getVerificationState() {
-    return verificationState;
+  public java.lang.String getPostbackData() {
+    return postbackData;
   }
 
   /**
-   * The verification state.
-   * @param verificationState verificationState or {@code null} for none
+   * The string the agent receives when the user taps the question response.
+   * @param postbackData postbackData or {@code null} for none
    */
-  public LocationVerification setVerificationState(java.lang.String verificationState) {
-    this.verificationState = verificationState;
+  public SurveyResponse setPostbackData(java.lang.String postbackData) {
+    this.postbackData = postbackData;
     return this;
   }
 
   @Override
-  public LocationVerification set(String fieldName, Object value) {
-    return (LocationVerification) super.set(fieldName, value);
+  public SurveyResponse set(String fieldName, Object value) {
+    return (SurveyResponse) super.set(fieldName, value);
   }
 
   @Override
-  public LocationVerification clone() {
-    return (LocationVerification) super.clone();
+  public SurveyResponse clone() {
+    return (SurveyResponse) super.clone();
   }
 
 }

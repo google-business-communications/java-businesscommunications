@@ -19,7 +19,7 @@
 package com.google.api.services.businesscommunications.v1.model;
 
 /**
- * Details about the verification information for a location.
+ * A list of all Google provided template questions.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Business Communications. For a detailed explanation
@@ -30,64 +30,46 @@ package com.google.api.services.businesscommunications.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class LocationVerification extends com.google.api.client.json.GenericJson {
+public final class ListSurveyQuestionsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The identifier for verification.
+   * List of Google provided template survey question information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String name;
+  private java.util.List<SurveyQuestion> surveyQuestions;
+
+  static {
+    // hack to force ProGuard to consider SurveyQuestion used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(SurveyQuestion.class);
+  }
 
   /**
-   * The verification state.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String verificationState;
-
-  /**
-   * Required. The identifier for verification.
+   * List of Google provided template survey question information.
    * @return value or {@code null} for none
    */
-  public java.lang.String getName() {
-    return name;
+  public java.util.List<SurveyQuestion> getSurveyQuestions() {
+    return surveyQuestions;
   }
 
   /**
-   * Required. The identifier for verification.
-   * @param name name or {@code null} for none
+   * List of Google provided template survey question information.
+   * @param surveyQuestions surveyQuestions or {@code null} for none
    */
-  public LocationVerification setName(java.lang.String name) {
-    this.name = name;
-    return this;
-  }
-
-  /**
-   * The verification state.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getVerificationState() {
-    return verificationState;
-  }
-
-  /**
-   * The verification state.
-   * @param verificationState verificationState or {@code null} for none
-   */
-  public LocationVerification setVerificationState(java.lang.String verificationState) {
-    this.verificationState = verificationState;
+  public ListSurveyQuestionsResponse setSurveyQuestions(java.util.List<SurveyQuestion> surveyQuestions) {
+    this.surveyQuestions = surveyQuestions;
     return this;
   }
 
   @Override
-  public LocationVerification set(String fieldName, Object value) {
-    return (LocationVerification) super.set(fieldName, value);
+  public ListSurveyQuestionsResponse set(String fieldName, Object value) {
+    return (ListSurveyQuestionsResponse) super.set(fieldName, value);
   }
 
   @Override
-  public LocationVerification clone() {
-    return (LocationVerification) super.clone();
+  public ListSurveyQuestionsResponse clone() {
+    return (ListSurveyQuestionsResponse) super.clone();
   }
 
 }

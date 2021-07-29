@@ -25,7 +25,7 @@ repositories {
 }
 
 dependencies {
-   compile group: 'com.google.apis', name: 'google-api-services-businesscommunications', version: '1.25.2'
+   compile group: 'com.google.apis', name: 'google-api-services-businesscommunications', version: '1.25.3'
 }
 ```
 
@@ -35,7 +35,7 @@ If using maven, add the following to your pom.xml file.
 <dependency>
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-businesscommunications</artifactId>
-  <version>1.25.2</version>
+  <version>1.25.3</version>
 </dependency>
 ```
 

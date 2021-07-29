@@ -19,7 +19,7 @@
 package com.google.api.services.businesscommunications.v1.model;
 
 /**
- * Details about the verification information for a location.
+ * Details about Verified Calls agent launch.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Business Communications. For a detailed explanation
@@ -30,64 +30,40 @@ package com.google.api.services.businesscommunications.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class LocationVerification extends com.google.api.client.json.GenericJson {
+public final class VerifiedCallsLaunch extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The identifier for verification.
+   * The launch state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String name;
+  private java.lang.String launchState;
 
   /**
-   * The verification state.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String verificationState;
-
-  /**
-   * Required. The identifier for verification.
+   * The launch state.
    * @return value or {@code null} for none
    */
-  public java.lang.String getName() {
-    return name;
+  public java.lang.String getLaunchState() {
+    return launchState;
   }
 
   /**
-   * Required. The identifier for verification.
-   * @param name name or {@code null} for none
+   * The launch state.
+   * @param launchState launchState or {@code null} for none
    */
-  public LocationVerification setName(java.lang.String name) {
-    this.name = name;
-    return this;
-  }
-
-  /**
-   * The verification state.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getVerificationState() {
-    return verificationState;
-  }
-
-  /**
-   * The verification state.
-   * @param verificationState verificationState or {@code null} for none
-   */
-  public LocationVerification setVerificationState(java.lang.String verificationState) {
-    this.verificationState = verificationState;
+  public VerifiedCallsLaunch setLaunchState(java.lang.String launchState) {
+    this.launchState = launchState;
     return this;
   }
 
   @Override
-  public LocationVerification set(String fieldName, Object value) {
-    return (LocationVerification) super.set(fieldName, value);
+  public VerifiedCallsLaunch set(String fieldName, Object value) {
+    return (VerifiedCallsLaunch) super.set(fieldName, value);
   }
 
   @Override
-  public LocationVerification clone() {
-    return (LocationVerification) super.clone();
+  public VerifiedCallsLaunch clone() {
+    return (VerifiedCallsLaunch) super.clone();
   }
 
 }
