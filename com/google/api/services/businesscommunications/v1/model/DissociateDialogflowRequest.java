@@ -19,7 +19,7 @@
 package com.google.api.services.businesscommunications.v1.model;
 
 /**
- * Request to begin business information verification for an agent.
+ * Request to dissociate a Dialogflow project from an agent.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Business Communications. For a detailed explanation
@@ -30,40 +30,16 @@ package com.google.api.services.businesscommunications.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class RequestAgentVerificationRequest extends com.google.api.client.json.GenericJson {
+public final class DissociateDialogflowRequest extends com.google.api.client.json.GenericJson {
 
-  /**
-   * Required. Verification contact details for the agent.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private AgentVerificationContact agentVerificationContact;
-
-  /**
-   * Required. Verification contact details for the agent.
-   * @return value or {@code null} for none
-   */
-  public AgentVerificationContact getAgentVerificationContact() {
-    return agentVerificationContact;
-  }
-
-  /**
-   * Required. Verification contact details for the agent.
-   * @param agentVerificationContact agentVerificationContact or {@code null} for none
-   */
-  public RequestAgentVerificationRequest setAgentVerificationContact(AgentVerificationContact agentVerificationContact) {
-    this.agentVerificationContact = agentVerificationContact;
-    return this;
+  @Override
+  public DissociateDialogflowRequest set(String fieldName, Object value) {
+    return (DissociateDialogflowRequest) super.set(fieldName, value);
   }
 
   @Override
-  public RequestAgentVerificationRequest set(String fieldName, Object value) {
-    return (RequestAgentVerificationRequest) super.set(fieldName, value);
-  }
-
-  @Override
-  public RequestAgentVerificationRequest clone() {
-    return (RequestAgentVerificationRequest) super.clone();
+  public DissociateDialogflowRequest clone() {
+    return (DissociateDialogflowRequest) super.clone();
   }
 
 }

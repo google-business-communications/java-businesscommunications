@@ -19,7 +19,7 @@
 package com.google.api.services.businesscommunications.v1.model;
 
 /**
- * Request to begin business information verification for an agent.
+ * Request to associate a Dialogflow project with an agent.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Business Communications. For a detailed explanation
@@ -30,40 +30,40 @@ package com.google.api.services.businesscommunications.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class RequestAgentVerificationRequest extends com.google.api.client.json.GenericJson {
+public final class AssociateDialogflowRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Verification contact details for the agent.
+   * Dialogflow association details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AgentVerificationContact agentVerificationContact;
+  private DialogflowAssociation dialogflowAssociation;
 
   /**
-   * Required. Verification contact details for the agent.
+   * Dialogflow association details.
    * @return value or {@code null} for none
    */
-  public AgentVerificationContact getAgentVerificationContact() {
-    return agentVerificationContact;
+  public DialogflowAssociation getDialogflowAssociation() {
+    return dialogflowAssociation;
   }
 
   /**
-   * Required. Verification contact details for the agent.
-   * @param agentVerificationContact agentVerificationContact or {@code null} for none
+   * Dialogflow association details.
+   * @param dialogflowAssociation dialogflowAssociation or {@code null} for none
    */
-  public RequestAgentVerificationRequest setAgentVerificationContact(AgentVerificationContact agentVerificationContact) {
-    this.agentVerificationContact = agentVerificationContact;
+  public AssociateDialogflowRequest setDialogflowAssociation(DialogflowAssociation dialogflowAssociation) {
+    this.dialogflowAssociation = dialogflowAssociation;
     return this;
   }
 
   @Override
-  public RequestAgentVerificationRequest set(String fieldName, Object value) {
-    return (RequestAgentVerificationRequest) super.set(fieldName, value);
+  public AssociateDialogflowRequest set(String fieldName, Object value) {
+    return (AssociateDialogflowRequest) super.set(fieldName, value);
   }
 
   @Override
-  public RequestAgentVerificationRequest clone() {
-    return (RequestAgentVerificationRequest) super.clone();
+  public AssociateDialogflowRequest clone() {
+    return (AssociateDialogflowRequest) super.clone();
   }
 
 }

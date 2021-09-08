@@ -25,7 +25,7 @@ repositories {
 }
 
 dependencies {
-   compile group: 'com.google.apis', name: 'google-api-services-businesscommunications', version: '1.25.4'
+   compile group: 'com.google.apis', name: 'google-api-services-businesscommunications', version: '1.25.5'
 }
 ```
 
