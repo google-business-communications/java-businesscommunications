@@ -19,7 +19,7 @@
 package com.google.api.services.businesscommunications.v1.model;
 
 /**
- * A list of brands.
+ * Response for ListIntegrations.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Business Communications. For a detailed explanation
@@ -30,50 +30,52 @@ package com.google.api.services.businesscommunications.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ListBrandsResponse extends com.google.api.client.json.GenericJson {
+public final class ListIntegrationsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of brand information.
+   * List of integrations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Brand> brands;
+  private java.util.List<Integration> integrations;
 
   static {
-    // hack to force ProGuard to consider Brand used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider Integration used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Brand.class);
+    com.google.api.client.util.Data.nullOf(Integration.class);
   }
 
   /**
-   * The pagination token to retrieve the next page of results. If the value is "", it means no
-   * further results for the request.
+   * Currently this field is unsupported because the number of agent-level integrations is too few
+   * for pagination to be needed. The pagination token to retrieve the next page of results. If the
+   * value is "", it means no further results for the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * List of brand information.
+   * List of integrations.
    * @return value or {@code null} for none
    */
-  public java.util.List<Brand> getBrands() {
-    return brands;
+  public java.util.List<Integration> getIntegrations() {
+    return integrations;
   }
 
   /**
-   * List of brand information.
-   * @param brands brands or {@code null} for none
+   * List of integrations.
+   * @param integrations integrations or {@code null} for none
    */
   @com.google.errorprone.annotations.CanIgnoreReturnValue
-  public ListBrandsResponse setBrands(java.util.List<Brand> brands) {
-    this.brands = brands;
+  public ListIntegrationsResponse setIntegrations(java.util.List<Integration> integrations) {
+    this.integrations = integrations;
     return this;
   }
 
   /**
-   * The pagination token to retrieve the next page of results. If the value is "", it means no
-   * further results for the request.
+   * Currently this field is unsupported because the number of agent-level integrations is too few
+   * for pagination to be needed. The pagination token to retrieve the next page of results. If the
+   * value is "", it means no further results for the request.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -81,24 +83,25 @@ public final class ListBrandsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * The pagination token to retrieve the next page of results. If the value is "", it means no
-   * further results for the request.
+   * Currently this field is unsupported because the number of agent-level integrations is too few
+   * for pagination to be needed. The pagination token to retrieve the next page of results. If the
+   * value is "", it means no further results for the request.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   @com.google.errorprone.annotations.CanIgnoreReturnValue
-  public ListBrandsResponse setNextPageToken(java.lang.String nextPageToken) {
+  public ListIntegrationsResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
     return this;
   }
 
   @Override
-  public ListBrandsResponse set(String fieldName, Object value) {
-    return (ListBrandsResponse) super.set(fieldName, value);
+  public ListIntegrationsResponse set(String fieldName, Object value) {
+    return (ListIntegrationsResponse) super.set(fieldName, value);
   }
 
   @Override
-  public ListBrandsResponse clone() {
-    return (ListBrandsResponse) super.clone();
+  public ListIntegrationsResponse clone() {
+    return (ListIntegrationsResponse) super.clone();
   }
 
 }

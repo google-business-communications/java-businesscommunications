@@ -32,7 +32,7 @@ package com.google.api.services.businesscommunications.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Document extends com.google.api.client.json.GenericJson {
+public final class DialogflowDocument extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Display name of a FAQ document.
@@ -49,9 +49,10 @@ public final class Document extends com.google.api.client.json.GenericJson {
   private java.lang.String faqUrl;
 
   /**
-   * Output only. Document ID. Unique identifier returned by Dialogflow service, after creation of a
-   * document Format -
-   * projects/{project}/dialogflowAssociation/knowledgebases/{knowledgebase}/documents/{document}
+   * System-generated Document ID. If the brand identifier is "1234", the agent identifier is
+   * "5678", the integration identifier is "9092", the knowledge base identifier is "1111", and the
+   * document identifier is "2222", this parameter resolves to
+   * "brands/1234/agents/5678/integrations/9092/knowledgebases/1111/documents/2222".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +93,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
    * @param displayName displayName or {@code null} for none
    */
   @com.google.errorprone.annotations.CanIgnoreReturnValue
-  public Document setDisplayName(java.lang.String displayName) {
+  public DialogflowDocument setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
     return this;
   }
@@ -110,15 +111,16 @@ public final class Document extends com.google.api.client.json.GenericJson {
    * @param faqUrl faqUrl or {@code null} for none
    */
   @com.google.errorprone.annotations.CanIgnoreReturnValue
-  public Document setFaqUrl(java.lang.String faqUrl) {
+  public DialogflowDocument setFaqUrl(java.lang.String faqUrl) {
     this.faqUrl = faqUrl;
     return this;
   }
 
   /**
-   * Output only. Document ID. Unique identifier returned by Dialogflow service, after creation of a
-   * document Format -
-   * projects/{project}/dialogflowAssociation/knowledgebases/{knowledgebase}/documents/{document}
+   * System-generated Document ID. If the brand identifier is "1234", the agent identifier is
+   * "5678", the integration identifier is "9092", the knowledge base identifier is "1111", and the
+   * document identifier is "2222", this parameter resolves to
+   * "brands/1234/agents/5678/integrations/9092/knowledgebases/1111/documents/2222".
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -126,13 +128,14 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Document ID. Unique identifier returned by Dialogflow service, after creation of a
-   * document Format -
-   * projects/{project}/dialogflowAssociation/knowledgebases/{knowledgebase}/documents/{document}
+   * System-generated Document ID. If the brand identifier is "1234", the agent identifier is
+   * "5678", the integration identifier is "9092", the knowledge base identifier is "1111", and the
+   * document identifier is "2222", this parameter resolves to
+   * "brands/1234/agents/5678/integrations/9092/knowledgebases/1111/documents/2222".
    * @param name name or {@code null} for none
    */
   @com.google.errorprone.annotations.CanIgnoreReturnValue
-  public Document setName(java.lang.String name) {
+  public DialogflowDocument setName(java.lang.String name) {
     this.name = name;
     return this;
   }
@@ -152,7 +155,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
    * @param operationInfo operationInfo or {@code null} for none
    */
   @com.google.errorprone.annotations.CanIgnoreReturnValue
-  public Document setOperationInfo(OperationInfo operationInfo) {
+  public DialogflowDocument setOperationInfo(OperationInfo operationInfo) {
     this.operationInfo = operationInfo;
     return this;
   }
@@ -183,7 +186,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
    * @param rawContent rawContent or {@code null} for none
    */
   @com.google.errorprone.annotations.CanIgnoreReturnValue
-  public Document setRawContent(java.lang.String rawContent) {
+  public DialogflowDocument setRawContent(java.lang.String rawContent) {
     this.rawContent = rawContent;
     return this;
   }
@@ -199,7 +202,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
    * @since 1.14
    */
   @com.google.errorprone.annotations.CanIgnoreReturnValue
-  public Document encodeRawContent(byte[] rawContent) {
+  public DialogflowDocument encodeRawContent(byte[] rawContent) {
     this.rawContent = com.google.api.client.util.Base64.encodeBase64URLSafeString(rawContent);
     return this;
   }
@@ -217,19 +220,19 @@ public final class Document extends com.google.api.client.json.GenericJson {
    * @param updateTime updateTime or {@code null} for none
    */
   @com.google.errorprone.annotations.CanIgnoreReturnValue
-  public Document setUpdateTime(String updateTime) {
+  public DialogflowDocument setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
     return this;
   }
 
   @Override
-  public Document set(String fieldName, Object value) {
-    return (Document) super.set(fieldName, value);
+  public DialogflowDocument set(String fieldName, Object value) {
+    return (DialogflowDocument) super.set(fieldName, value);
   }
 
   @Override
-  public Document clone() {
-    return (Document) super.clone();
+  public DialogflowDocument clone() {
+    return (DialogflowDocument) super.clone();
   }
 
 }

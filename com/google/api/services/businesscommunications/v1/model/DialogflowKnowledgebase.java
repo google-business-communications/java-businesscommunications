@@ -30,7 +30,7 @@ package com.google.api.services.businesscommunications.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Knowledgebase extends com.google.api.client.json.GenericJson {
+public final class DialogflowKnowledgebase extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Knowledge base display name.
@@ -40,15 +40,17 @@ public final class Knowledgebase extends com.google.api.client.json.GenericJson 
   private java.lang.String displayName;
 
   /**
-   * Output only. Knowledge base documents.
+   * Knowledge base documents. Optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Document> documents;
+  private java.util.List<DialogflowDocument> documents;
 
   /**
-   * Output only. Knowledge base ID. Unique identifier returned by Dialogflow service, after
-   * creation of a knowledge base. Format - projects//knowledgeBases/.
+   * Output only. Knowledgebase ID. Unique identifier returned by Dialogflow service after creation
+   * of a knowledge base. If the brand identifier is "1234", the agent identifier is "5678", the
+   * integration identifier is "9092", and the knowledge base identifier is "1111", this parameter
+   * resolves to "brands/1234/agents/5678/integrations/9092/knowledgebases/1111".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,32 +76,34 @@ public final class Knowledgebase extends com.google.api.client.json.GenericJson 
    * @param displayName displayName or {@code null} for none
    */
   @com.google.errorprone.annotations.CanIgnoreReturnValue
-  public Knowledgebase setDisplayName(java.lang.String displayName) {
+  public DialogflowKnowledgebase setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
     return this;
   }
 
   /**
-   * Output only. Knowledge base documents.
+   * Knowledge base documents. Optional
    * @return value or {@code null} for none
    */
-  public java.util.List<Document> getDocuments() {
+  public java.util.List<DialogflowDocument> getDocuments() {
     return documents;
   }
 
   /**
-   * Output only. Knowledge base documents.
+   * Knowledge base documents. Optional
    * @param documents documents or {@code null} for none
    */
   @com.google.errorprone.annotations.CanIgnoreReturnValue
-  public Knowledgebase setDocuments(java.util.List<Document> documents) {
+  public DialogflowKnowledgebase setDocuments(java.util.List<DialogflowDocument> documents) {
     this.documents = documents;
     return this;
   }
 
   /**
-   * Output only. Knowledge base ID. Unique identifier returned by Dialogflow service, after
-   * creation of a knowledge base. Format - projects//knowledgeBases/.
+   * Output only. Knowledgebase ID. Unique identifier returned by Dialogflow service after creation
+   * of a knowledge base. If the brand identifier is "1234", the agent identifier is "5678", the
+   * integration identifier is "9092", and the knowledge base identifier is "1111", this parameter
+   * resolves to "brands/1234/agents/5678/integrations/9092/knowledgebases/1111".
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -107,12 +111,14 @@ public final class Knowledgebase extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Knowledge base ID. Unique identifier returned by Dialogflow service, after
-   * creation of a knowledge base. Format - projects//knowledgeBases/.
+   * Output only. Knowledgebase ID. Unique identifier returned by Dialogflow service after creation
+   * of a knowledge base. If the brand identifier is "1234", the agent identifier is "5678", the
+   * integration identifier is "9092", and the knowledge base identifier is "1111", this parameter
+   * resolves to "brands/1234/agents/5678/integrations/9092/knowledgebases/1111".
    * @param name name or {@code null} for none
    */
   @com.google.errorprone.annotations.CanIgnoreReturnValue
-  public Knowledgebase setName(java.lang.String name) {
+  public DialogflowKnowledgebase setName(java.lang.String name) {
     this.name = name;
     return this;
   }
@@ -130,19 +136,19 @@ public final class Knowledgebase extends com.google.api.client.json.GenericJson 
    * @param updateTime updateTime or {@code null} for none
    */
   @com.google.errorprone.annotations.CanIgnoreReturnValue
-  public Knowledgebase setUpdateTime(String updateTime) {
+  public DialogflowKnowledgebase setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
     return this;
   }
 
   @Override
-  public Knowledgebase set(String fieldName, Object value) {
-    return (Knowledgebase) super.set(fieldName, value);
+  public DialogflowKnowledgebase set(String fieldName, Object value) {
+    return (DialogflowKnowledgebase) super.set(fieldName, value);
   }
 
   @Override
-  public Knowledgebase clone() {
-    return (Knowledgebase) super.clone();
+  public DialogflowKnowledgebase clone() {
+    return (DialogflowKnowledgebase) super.clone();
   }
 
 }
