@@ -131,9 +131,9 @@
           <windowtitle>Business Communications ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
-            <link>http://javadoc.google-http-java-client.googlecode.com/hg/1.25.0-SNAPSHOT</link>
-            <link>http://javadoc.google-oauth-java-client.googlecode.com/hg/1.25.0-SNAPSHOT</link>
-            <link>http://javadoc.google-api-java-client.googlecode.com/hg/1.25.0-SNAPSHOT</link>
+            <link>http://javadoc.google-http-java-client.googlecode.com/hg/1.25.0</link>
+            <link>http://javadoc.google-oauth-java-client.googlecode.com/hg/1.25.0</link>
+            <link>http://javadoc.google-api-java-client.googlecode.com/hg/1.25.0</link>
           </links>
         </configuration>
       </plugin>
@@ -146,6 +146,11 @@
       <groupId>com.google.api-client</groupId>
       <artifactId>google-api-client</artifactId>
       <version>1.25.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.errorprone</groupId>
+      <artifactId>error_prone_annotations</artifactId>
+      <version>2.15.0</version>
     </dependency>
   </dependencies>
 
