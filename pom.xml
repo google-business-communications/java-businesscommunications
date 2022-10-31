@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-businesscommunications</artifactId>
-  <version>2.0.0</version>
-  <name>Business Communications 2.0.0</name>
+  <version>2.1.0</version>
+  <name>Business Communications 2.1.0</name>
   <packaging>jar</packaging>
   <url>https://developers.google.com/business-communications/business-messages</url>
   <description>Java library for Google's Business Communications API</description>
